@@ -10,6 +10,7 @@ connectDB()
 
 const app = express();
 
+app.use(express.json()) // To be able to parse json
 app.get("/",(req, res)=>res.send('Server is ready'));
 app.use("/api/users", userRoutes);
 
